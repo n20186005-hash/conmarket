@@ -1,0 +1,8 @@
+{
+  "name": "Chợ Cồn · Con Market Guide",
+  "short_name": "Chợ Cồn",
+  "icons": [{ "src": "/favicon.svg", "sizes": "16x16", "type": "image/svg+xml" }, { "src": "/favicon.svg", "sizes": "32x32", "type": "image/svg+xml" }, { "src": "/favicon.svg", "sizes": "180x180", "type": "image/svg+xml" }],
+  "theme_color": "#173B5C",
+  "background_color": "#F7F0E4",
+  "display": "browser"
+}
