@@ -1,8 +1,14 @@
 {
   "name": "Chợ Cồn · Con Market Guide",
   "short_name": "Chợ Cồn",
-  "icons": [{ "src": "/favicon.svg", "sizes": "16x16", "type": "image/svg+xml" }, { "src": "/favicon.svg", "sizes": "32x32", "type": "image/svg+xml" }, { "src": "/favicon.svg", "sizes": "180x180", "type": "image/svg+xml" }],
-  "theme_color": "#173B5C",
+  "description": "Independent bilingual visitor guide for Chợ Cồn (Con Market), Đà Nẵng.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
   "background_color": "#F7F0E4",
-  "display": "browser"
+  "theme_color": "#173B5C",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
 }

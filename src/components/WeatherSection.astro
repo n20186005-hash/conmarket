@@ -1,0 +1,75 @@
+---
+// Weather module: the browser fetches the Cloudflare Worker endpoint (/api/weather), which
+// fetches and caches the data server-side. Visitors see the forecast plus a practical,
+// automatically derived recommendation (risk banner + outfit / plan / items tabs).
+---
+<section class="weather" aria-labelledby="weather-title">
+  <div class="section-shell">
+    <div><p class="section-index">02 —</p><p class="eyebrow" style="color:#F3B23C">Thời tiết hôm nay</p></div>
+    <div>
+      <h2 id="weather-title" class="display section-title"><span class="lang-vi">Thời tiết & nên chuẩn bị gì</span><span class="lang-en">Weather & what to prepare</span></h2>
+      <div id="weather-root" class="weather-body">
+        <p class="weather-fallback lang-vi">Đang tải dự báo thời tiết…</p>
+        <p class="weather-fallback lang-en">Loading the forecast…</p>
+      </div>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  (async () => {
+    const root = document.getElementById("weather-root");
+    if (!root) return;
+    const fallback = '<p class="weather-fallback lang-vi">Dự báo thời tiết tạm thời chưa tải được; bạn có thể xem dự báo trên ứng dụng thời tiết trước khi đi.</p><p class="weather-fallback lang-en">The forecast is briefly unavailable; check a weather app before you head out.</p>';
+    const shortDate = (iso) => { const dt = new Date(iso + "T00:00:00"); return `${dt.getDate()}/${dt.getMonth() + 1}`; };
+    const beaufort = (kmh) => { const v = Math.round(kmh); if (v < 1) return 0; if (v <= 5) return 1; if (v <= 11) return 2; if (v <= 19) return 3; if (v <= 28) return 4; if (v <= 38) return 5; if (v <= 49) return 6; if (v <= 61) return 7; if (v <= 74) return 8; if (v <= 88) return 9; if (v <= 102) return 10; if (v <= 117) return 11; return 12; };
+    const TAB = { outfit: { vi: "Trang phục", en: "Outfit" }, plan: { vi: "Lịch trình", en: "Plan" }, items: { vi: "Mang theo", en: "To pack" } };
+    const listHtml = (arr) => (arr || []).map((a) => `<li><span class="lang-vi">${a.vi}</span><span class="lang-en">${a.en}</span></li>`).join("");
+
+    const render = (d) => {
+      const now = d.now;
+      const today = d.days[0] || { pop: 0 };
+      const lvl = beaufort(now.wind);
+      const risk = d.advice.alert
+        ? `<div class="weather-risk"><span class="risk-icon" aria-hidden="true">⚠️</span><span><span class="lang-vi">${d.advice.alert.vi}</span><span class="lang-en">${d.advice.alert.en}</span></span></div>`
+        : "";
+      const order = ["outfit", "plan", "items"];
+      const present = order.filter((k) => d.advice[k] && d.advice[k].length);
+      if (present.length === 0) present.push("plan");
+      const tabs = present
+        .map((k, i) => `<button type="button" class="adv-tab${i === 0 ? " is-active" : ""}" data-tab="${k}" aria-pressed="${i === 0}"><span class="lang-vi">${TAB[k].vi}</span><span class="lang-en">${TAB[k].en}</span></button>`)
+        .join("");
+      const panels = order
+        .map((k) => {
+          const hidden = !present.includes(k) || present[0] !== k;
+          return `<div class="adv-panel" data-panel="${k}"${hidden ? " hidden" : ""}><ul>${listHtml(d.advice[k])}</ul></div>`;
+        })
+        .join("");
+      const days = d.days
+        .map((x) => `<li><span class="wf-day">${shortDate(x.date)}</span><span class="wf-icon" aria-hidden="true">${x.icon}</span><span class="wf-pop">${x.pop}%</span><span class="wf-temp">${x.tmin}°–${x.tmax}°</span></li>`)
+        .join("");
+      return `<div class="weather-grid"><div class="weather-now"><div class="weather-icon" aria-hidden="true">${now.icon}</div><div><p class="weather-temp">${now.temperature}°C <small><span class="lang-vi">cảm giác ${now.feelsLike}°</span><span class="lang-en">feels ${now.feelsLike}°</span></small></p><p class="weather-cond"><span class="lang-vi">${now.labelVi}</span><span class="lang-en">${now.labelEn}</span></p><p class="weather-meta"><span class="lang-vi">Độ ẩm ${now.humidity}% · Gió ${now.wind} km/h (cấp ${lvl}) · UV ${now.uv} · Mưa ${today.pop}%</span><span class="lang-en">Humidity ${now.humidity}% · Wind ${now.wind} km/h (lv ${lvl}) · UV ${now.uv} · Rain ${today.pop}%</span></p></div></div><div class="weather-advice"><p class="eyebrow">Gợi ý · Tip</p>${risk}<div class="advice-tabs" role="tablist">${tabs}</div>${panels}</div></div><ul class="weather-forecast" aria-label="Dự báo 7 ngày">${days}</ul>`;
+    };
+
+    const wireTabs = () => {
+      const tabs = root.querySelectorAll(".adv-tab");
+      tabs.forEach((t) => t.addEventListener("click", () => {
+        tabs.forEach((x) => { x.classList.remove("is-active"); x.setAttribute("aria-pressed", "false"); });
+        root.querySelectorAll(".adv-panel").forEach((p) => { p.hidden = true; });
+        t.classList.add("is-active");
+        t.setAttribute("aria-pressed", "true");
+        const panel = root.querySelector(`.adv-panel[data-panel="${t.dataset.tab}"]`);
+        if (panel) panel.hidden = false;
+      }));
+    };
+
+    try {
+      const res = await fetch("/api/weather");
+      const d = await res.json();
+      if (!d || d.error) { root.innerHTML = fallback; return; }
+      root.innerHTML = render(d);
+      wireTabs();
+    } catch {
+      root.innerHTML = fallback;
+    }
+  })();
+</script>

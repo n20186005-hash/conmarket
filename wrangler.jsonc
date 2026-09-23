@@ -1,5 +1,9 @@
 {
-  "name": "con-market-guide",
+  "name": "conmarket-guide",
   "compatibility_date": "2026-08-27",
-  "assets": { "directory": "./dist", "not_found_handling": "404-page" }
+  "main": "./worker.js",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
 }
