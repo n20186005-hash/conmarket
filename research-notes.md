@@ -1,6 +1,7 @@
-# 实施与排查记录
+# Content sources
 
-## 媒体资源预览
+Maps supplies a dated third-party place snapshot; the visible source note distinguishes it from the city tourism portal’s 2023 article. Address and hours differ between those sources, and individual vendors may operate separately. Use the linked map pin and confirm operational details before travelling.
 
-- `vite-plugin-manus-runtime` 提供的是用于注入浏览器端运行时的 Vite 插件，并不直接为 Astro 开发服务器注册 `/manus-storage/` 静态资源代理。
-- 在当前 Astro 预览中，已上传资源的相对路径返回 404。因此需要选择一个能在 Astro 静态构建产物中可靠提供图片的方式，同时保留项目外的原始图片资产。
+City tourism source: https://danangfantasticity.com/en/discovery/famous-local-markets-in-danang
+
+Original conceptual illustrations are used without claiming documentary photography. Weather is a regional model forecast, not a market observation or an operator closure notice.

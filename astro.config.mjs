@@ -3,8 +3,8 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
-// Single source of truth for the production domain. Set PUBLIC_SITE_URL when a domain is available.
-const site = process.env.PUBLIC_SITE_URL ? process.env.PUBLIC_SITE_URL.replace(/\/$/, "") : undefined;
+// Canonical production origin for reproducible static metadata and locale output.
+const site = "https://conmarket.org";
 
 export default defineConfig({
   site,

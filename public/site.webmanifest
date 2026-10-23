@@ -1,14 +1,24 @@
 {
-  "name": "Chợ Cồn · Con Market Guide",
-  "short_name": "Chợ Cồn",
-  "description": "Independent bilingual visitor guide for Chợ Cồn (Con Market), Đà Nẵng.",
+  "name": "Ch\u1ee3 C\u1ed3n \u00b7 Con Market Guide",
+  "short_name": "Ch\u1ee3 C\u1ed3n",
+  "description": "Independent visitor guide in Vietnamese, English, Chinese and Korean for Con Market, Da Nang.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#F7F0E4",
   "theme_color": "#173B5C",
   "icons": [
-    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
-    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
   ]
 }

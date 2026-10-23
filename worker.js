@@ -5,7 +5,7 @@
 //   No API key is involved.
 
 const LAT = 16.0677927;
-const LNG = 108.2049562;
+const LNG = 108.2144834;
 
 // WMO weather interpretation codes → label (vi/en/zh/ko), icon and rain flag.
 const WMO = {
@@ -120,10 +120,10 @@ function buildAdvice(now, today) {
     push(items, { vi: "Ô gấp nhỏ", en: "Compact foldable umbrella", zh: "轻便折叠伞", ko: "접이식 우산" });
   } else if (isHeavyRain) {
     alert = {
-      vi: "Mưa khá lớn — tránh thung lũng, vùng trũng thấp; tàu du lịch, cáp treo có thể ngưng hoạt động.",
+      vi: "Mưa khá lớn — tránh thung lũng, vùng trũng thấp; kiểm tra cảnh báo và xác nhận hoạt động với đơn vị vận hành.",
       en: "Heavy rain — avoid valleys and low-lying areas; sightseeing boats and cable cars may stop.",
-      zh: "雨势较大——避开山谷与低洼地带；观光船、缆车可能停运。",
-      ko: "비가 꽤 쎄게 내림 — 계곡·저지대를 피하고 유람선·케이블카가 멈출 수 있습니다."
+      zh: "雨势较大——避开山谷与低洼地带；请查询预警并向运营方确认活动。",
+      ko: "비가 꽤 쎄게 내림 — 계곡·저지대를 피하고 최신 경보와 운영 상황을 확인하세요."
     };
     push(plan, {
       vi: "Không nên chơi ngoài trời lâu, ưu tiên nhà triển lãm trong nhà.",
@@ -134,10 +134,10 @@ function buildAdvice(now, today) {
     push(items, { vi: "Áo mưa (gió lớn, không nên dùng ô cán dài)", en: "Raincoat (windy — skip long-handle umbrellas)", zh: "雨衣（风大，勿用长柄伞）", ko: "우비(바람 심하니 장대 우산은 피하세요)" });
   } else if (isStorm) {
     alert = {
-      vi: "Đề phòng sấm sét — không lên núi, không tắm biển, không trú mưa dưới gốc cây; trò chơi trên nước khả năng cao phải đóng.",
-      en: "Beware lightning — no mountain climbs, no swimming, no sheltering under trees; water activities are very likely closed.",
-      zh: "谨防雷电——勿登山、勿下海、勿在树下躲雨；水上项目很可能关闭。",
-      ko: "번개 주의 — 산에 오르거나 바다에 들어가거나 나무 아래서 비를 피하지 마세요. 수상 활동은 대개 중단됩니다."
+      vi: "Đề phòng sấm sét — không lên núi, không tắm biển, không trú mưa dưới gốc cây; xác nhận hoạt động với đơn vị vận hành.",
+      en: "Beware lightning — no mountain climbs, no swimming, no sheltering under trees; check operator notices for any closures.",
+      zh: "谨防雷电——勿登山、勿下海、勿在树下躲雨；水上活动请向运营方确认。",
+      ko: "번개 주의 — 산에 오르거나 바다에 들어가거나 나무 아래서 비를 피하지 마세요. 수상 활동은 운영사에 확인하세요."
     };
   }
 
@@ -173,10 +173,10 @@ function buildAdvice(now, today) {
   // ── Wind ──────────────────────────────────────────────────────────────
   if (windLevel >= 7) {
     alert = alert ?? {
-      vi: "Gió mạnh — tránh xa biển báo, mỏm đá ven biển; trò chơi ngoài khơi khả năng cao phải đóng.",
-      en: "Strong wind — stay away from billboards and coastal rocks; offshore activities are very likely closed.",
-      zh: "大风——远离广告牌与海边礁石；海上项目很可能关闭。",
-      ko: "강풍 — 간판과 해안 암초에서 멀리 떨어지세요. 해상 활동은 대개 중단됩니다."
+      vi: "Gió mạnh — tránh xa biển báo, mỏm đá ven biển; xác nhận hoạt động ngoài khơi với đơn vị vận hành.",
+      en: "Strong wind — stay away from billboards and coastal rocks; check operator notices before any offshore activity.",
+      zh: "大风——远离广告牌与海边礁石；海上活动请向运营方确认。",
+      ko: "강풍 — 간판과 해안 암초에서 멀리 떨어지세요. 해상 활동은 운영사에 확인하세요."
     };
   } else if (windLevel >= 5) {
     push(plan, {
@@ -199,10 +199,10 @@ function buildAdvice(now, today) {
     push(items, { vi: "Nhớ bôi chống nắng", en: "Remember sun protection", zh: "记得防晒", ko: "선크림을 바르세요" });
   } else if (isOvercast) {
     push(plan, {
-      vi: "Ánh sáng dịu — rất hợp để chụp ảnh, không nắng gắt nên dạo ngoài trời lâu cũng ổn.",
-      en: "Soft light — great for photos; no harsh sun so longer outdoor strolls are fine.",
-      zh: "光线柔和——很适合拍照；无烈日，长时间户外漫步也行。",
-      ko: "부드러운 빛 — 사진 찍기에 좋고 강한 햇빛이 없어 긴 야외 산책도 괜찮습니다."
+      vi: "Ánh sáng dịu — rất hợp để chụp ảnh, mây không bảo đảm tia UV thấp hoặc điều kiện an toàn.",
+      en: "Soft light — great for photos; cloud cover does not guarantee low UV or safe conditions.",
+      zh: "光线柔和——很适合拍照；多云不代表紫外线弱或环境安全。",
+      ko: "부드러운 빛 — 사진 찍기에 좋고 구름이 자외선이나 안전을 보장하지는 않습니다."
     });
   }
 
@@ -233,17 +233,21 @@ function buildAdvice(now, today) {
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=600, s-maxage=600" }
+    headers: { "content-type": "application/json; charset=utf-8", "cache-control": status === 200 ? "public, max-age=600, s-maxage=600" : "no-store" }
   });
 }
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.hostname === "conmarket.org" && url.protocol === "http:") { url.protocol = "https:"; return Response.redirect(url.href, 308); }
+    const head = request.method === "HEAD";
+    const finish = response => head ? new Response(null, {status: response.status, headers: response.headers}) : response;
     if (url.pathname === "/api/weather") {
+      if (!["GET", "HEAD"].includes(request.method)) return new Response(null, {status:405, headers:{Allow:"GET, HEAD"}});
       try {
-        const upstream = await fetch(buildUrl(), { cf: { cacheTtl: 600 } });
-        if (!upstream.ok) return json({ error: true });
+        const upstream = await fetch(buildUrl(), { cf: { cacheTtl: 600 }, signal: AbortSignal.timeout(6000) });
+        if (!upstream.ok) return finish(json({ error: true }, 502));
         const d = await upstream.json();
         const cur = d.current;
         const info = describe(cur.weather_code);
@@ -265,6 +269,7 @@ export default {
           const di = describe(d.daily.weather_code[i]);
           return {
             date,
+            code: d.daily.weather_code[i],
             labelVi: di.vi,
             labelEn: di.en,
             labelZh: di.zh,
@@ -278,12 +283,19 @@ export default {
           };
         });
         const today = days[0] ?? { code: cur.weather_code, tmax: now.temperature, tmin: now.temperature, pop: 0, windMax: now.wind, uv: now.uv };
-        return json({ now, days, advice: buildAdvice(now, today) });
+        return finish(json({ now, days, advice: buildAdvice(now, today) }));
       } catch {
-        return json({ error: true });
+        return finish(json({ error: true }, 502));
       }
     }
-    return env.ASSETS.fetch(request);
+    const explicitError = /^\/(?:(?:en|zh|ko)\/)?404(?:\.html|\/)?$/.test(url.pathname);
+    const response = explicitError ? new Response(null, {status:404}) : await env.ASSETS.fetch(request);
+    if (response.status !== 404) return finish(response);
+    const locale = url.pathname.match(/^\/(en|zh|ko)(?:\/|$)/)?.[1];
+    const errorUrl = new URL(locale ? `/${locale}/404/` : "/404", url);
+    const error = await env.ASSETS.fetch(new Request(errorUrl, {method:"GET"}));
+    const headers = new Headers(error.headers);headers.delete("location");headers.set("x-robots-tag","noindex");headers.set("cache-control","no-store");
+    return new Response(head ? null : error.body, {status:404,headers});
   }
 };
 
