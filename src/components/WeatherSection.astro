@@ -64,10 +64,23 @@
       }));
     };
 
+    const validPayload = (data) => {
+      const numeric = value => typeof value === "number" && Number.isFinite(value);
+      const labels = value => value && ["vi", "en", "zh", "ko"].every(lang => typeof value[lang] === "string" && value[lang].length > 0);
+      const days = data?.days;
+      return !data?.error && ["temperature", "feelsLike", "humidity", "wind", "code", "uv"].every(key => numeric(data?.now?.[key]))
+        && ["labelVi", "labelEn", "labelZh", "labelKo", "icon"].every(key => typeof data.now[key] === "string" && data.now[key].length > 0)
+        && Array.isArray(days) && days.length === 7 && days.every(day => day && typeof day.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(day.date)
+          && Number.isFinite(Date.parse(day.date)) && new Date(day.date).toISOString().slice(0, 10) === day.date
+          && ["code", "tmax", "tmin", "pop", "windMax", "uv"].every(key => numeric(day[key])) && typeof day.icon === "string" && day.icon.length > 0)
+        && data.advice && (data.advice.alert === null || labels(data.advice.alert))
+        && ["outfit", "plan", "items"].every(key => Array.isArray(data.advice[key]) && data.advice[key].every(labels));
+    };
+
     try {
       const res = await fetch("/api/weather");
       const d = await res.json();
-      if (!d || d.error) { root.innerHTML = fallback; return; }
+      if (!res.ok || !validPayload(d)) { root.innerHTML = fallback; return; }
       root.innerHTML = render(d);
       wireTabs();
     } catch {

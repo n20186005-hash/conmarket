@@ -237,6 +237,20 @@ function json(data, status = 200) {
   });
 }
 
+// Validate fields consumed below before rounding; malformed forecasts must not become cached nulls.
+function validForecast(data) {
+  const currentKeys = ["temperature_2m", "apparent_temperature", "relative_humidity_2m", "wind_speed_10m", "weather_code"];
+  const dailyKeys = ["weather_code", "temperature_2m_max", "temperature_2m_min", "precipitation_probability_max", "wind_speed_10m_max", "uv_index_max"];
+  const numeric = value => typeof value === "number" && Number.isFinite(value);
+  const dates = data?.daily?.time;
+  return currentKeys.every(key => numeric(data?.current?.[key]))
+    && Array.isArray(dates) && dates.length === 7
+    && dates.every((date, i) => typeof date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(date)
+      && Number.isFinite(Date.parse(date)) && new Date(date).toISOString().slice(0, 10) === date
+      && (i === 0 || Date.parse(date) > Date.parse(dates[i - 1])))
+    && dailyKeys.every(key => Array.isArray(data.daily[key]) && data.daily[key].length === dates.length && data.daily[key].every(numeric));
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
@@ -249,6 +263,7 @@ export default {
         const upstream = await fetch(buildUrl(), { cf: { cacheTtl: 600 }, signal: AbortSignal.timeout(6000) });
         if (!upstream.ok) return finish(json({ error: true }, 502));
         const d = await upstream.json();
+        if (!validForecast(d)) return finish(json({ error: true }, 502));
         const cur = d.current;
         const info = describe(cur.weather_code);
         const now = {
