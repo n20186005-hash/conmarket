@@ -16,3 +16,14 @@ body::before{content:"";position:fixed;z-index:20;inset:0;pointer-events:none;op
 @media (min-width:980px){.transport-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.itinerary-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 .illustration-credit{position:relative;margin:0;padding:.7rem 1rem;background:var(--paper);color:var(--ink);font-size:.8rem;z-index:2}.language-switch a{display:inline-block;padding:.35rem .5rem;text-decoration:none;color:inherit}.language-switch a[aria-current="page"]{border-bottom:2px solid var(--turmeric)}
+
+/* Small-screen header: keep language names horizontal in their own row. */
+@media (max-width:679px){
+  .topbar{position:relative;flex-direction:column;align-items:flex-start;gap:.85rem}
+  .topbar .brand{flex-shrink:0}
+  .language-switch{display:flex;width:100%;max-width:100%;flex-wrap:wrap;gap:.25rem .5rem;border-radius:1rem}
+  .language-switch a{flex:0 0 auto;white-space:nowrap;font:700 .85rem var(--body)}
+  .hero-content{padding-top:1.5rem}
+  .guide-hero,.legal-hero{padding-top:0}
+  .legal-hero>.topbar{padding-inline:0}
+}
