@@ -1,0 +1,110 @@
+---
+// Data-driven guide page. Renders every Chợ Cồn topic page from src/data/guides.ts.
+// Localise script (scripts/localize.mjs) consumes the lang-* spans, <details> (FAQ) and <h1> contract.
+import SourceNote from "../components/SourceNote.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import LanguageSwitch from "../components/LanguageSwitch.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import TransportGuide from "../components/TransportGuide.astro";
+import { guides, type Guide } from "../data/guides";
+
+export function getStaticPaths() {
+  return guides.map((g: Guide) => ({ params: { slug: g.slug }, props: { g } }));
+}
+const { g } = Astro.props as { g: Guide };
+const sectionCount = g.sections.length;
+---
+<BaseLayout
+  title={g.title.vi} description={g.desc.vi}
+  titleEn={g.title.en} descriptionEn={g.desc.en}
+  titleZh={g.title.zh} descriptionZh={g.desc.zh}
+  titleKo={g.title.ko} descriptionKo={g.desc.ko}
+  canonicalPath={"/" + g.slug + "/"}
+>
+  <header class="guide-hero">
+    <div class="topbar">
+      <a class="brand" href="/"><img src="/favicon.svg" alt="" width="44" height="44" /><span class="brand-name">CHỢ CỒN</span></a>
+      <LanguageSwitch />
+    </div>
+    <div class="section-shell">
+      <p class="eyebrow">
+        <span class="lang-vi">{g.hero.eye.vi}</span><span class="lang-en">{g.hero.eye.en}</span><span class="lang-zh">{g.hero.eye.zh}</span><span class="lang-ko">{g.hero.eye.ko}</span>
+      </p>
+      <h1 class="display">
+        <span class="lang-vi">{g.hero.h1.vi}</span><span class="lang-en">{g.hero.h1.en}</span><span class="lang-zh">{g.hero.h1.zh}</span><span class="lang-ko">{g.hero.h1.ko}</span>
+      </h1>
+      <p class="intro-text">
+        <span class="lang-vi">{g.hero.intro.vi}</span><span class="lang-en">{g.hero.intro.en}</span><span class="lang-zh">{g.hero.intro.zh}</span><span class="lang-ko">{g.hero.intro.ko}</span>
+      </p>
+      <a class="guide-back" href="/"><span class="lang-vi">← Trở về hướng dẫn chính</span><span class="lang-en">← Return to main guide</span><span class="lang-zh">← 返回主指南</span><span class="lang-ko">← 메인 가이드로</span></a>
+    </div>
+  </header>
+  <main class="guide-body">
+    {g.transport ? (
+      <TransportGuide />
+    ) : (
+      g.sections.map((s, si) => (
+        <section class="section-shell" aria-labelledby={"sec-" + si}>
+          <div>
+            <p class="section-index">{s.idx} —</p>
+            <p class="eyebrow"><span class="lang-vi">{s.eye.vi}</span><span class="lang-en">{s.eye.en}</span><span class="lang-zh">{s.eye.zh}</span><span class="lang-ko">{s.eye.ko}</span></p>
+          </div>
+          <div>
+            <h2 id={"sec-" + si} class="display section-title"><span class="lang-vi">{s.title.vi}</span><span class="lang-en">{s.title.en}</span><span class="lang-zh">{s.title.zh}</span><span class="lang-ko">{s.title.ko}</span></h2>
+            {s.intro && (
+              <p class="intro-text lang-vi">{s.intro.vi}</p>
+              <p class="intro-text lang-en">{s.intro.en}</p>
+              <p class="intro-text lang-zh">{s.intro.zh}</p>
+              <p class="intro-text lang-ko">{s.intro.ko}</p>
+            )}
+            <div class="field-guide">
+              {s.items.map((it) => (
+                <article class="field-card">
+                  <span class="card-number">{it.n}</span>
+                  <h3><span class="lang-vi">{it.t.vi}</span><span class="lang-en">{it.t.en}</span><span class="lang-zh">{it.t.zh}</span><span class="lang-ko">{it.t.ko}</span></h3>
+                  <p class="lang-vi">{it.b.vi}</p><p class="lang-en">{it.b.en}</p><p class="lang-zh">{it.b.zh}</p><p class="lang-ko">{it.b.ko}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))
+    )}
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="section-shell">
+        <div><p class="section-index">{sectionCount + 1} —</p><p class="eyebrow"><span class="lang-vi">Câu hỏi thường gặp</span><span class="lang-en">FAQ</span><span class="lang-zh">常见问题</span><span class="lang-ko">자주 묻는 질문</span></p></div>
+        <div>
+          <h2 id="faq-title" class="display section-title"><span class="lang-vi">Những điều hay hỏi</span><span class="lang-en">Common questions</span><span class="lang-zh">常见问题</span><span class="lang-ko">자주 묻는 질문</span></h2>
+          <div class="faq-list">
+            {g.faqs.map((f) => (
+              <details>
+                <summary><span class="lang-vi">{f.q.vi}</span><span class="lang-en">{f.q.en}</span><span class="lang-zh">{f.q.zh}</span><span class="lang-ko">{f.q.ko}</span></summary>
+                <div class="answer">
+                  <p class="lang-vi">{f.a.vi}</p><p class="lang-en">{f.a.en}</p><p class="lang-zh">{f.a.zh}</p><p class="lang-ko">{f.a.ko}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="nearby" aria-labelledby="more-title">
+      <div class="section-shell">
+        <div><p class="section-index">{sectionCount + 2} —</p><p class="eyebrow" style="color:#F3B23C"><span class="lang-vi">Đọc sâu hơn</span><span class="lang-en">Detailed guides</span><span class="lang-zh">深入指南</span><span class="lang-ko">심층 가이드</span></p></div>
+        <div><h2 id="more-title" class="display section-title"><span class="lang-vi">Các hướng dẫn chi tiết khác</span><span class="lang-en">More detailed guides</span><span class="lang-zh">其他详细指南</span><span class="lang-ko">다른 상세 가이드</span></h2></div>
+      </div>
+      <div class="nearby-grid">
+        {g.rel.map((r) => (
+          <article class="nearby-item">
+            <small><span class="lang-vi">{r.tag.vi}</span><span class="lang-en">{r.tag.en}</span><span class="lang-zh">{r.tag.zh}</span><span class="lang-ko">{r.tag.ko}</span></small>
+            <h3><span class="lang-vi">{r.title.vi}</span><span class="lang-en">{r.title.en}</span><span class="lang-zh">{r.title.zh}</span><span class="lang-ko">{r.title.ko}</span></h3>
+            <p class="lang-vi">{r.desc.vi}</p><p class="lang-en">{r.desc.en}</p><p class="lang-zh">{r.desc.zh}</p><p class="lang-ko">{r.desc.ko}</p>
+            <a href={"/" + r.slug + "/"}><span class="lang-vi">Xem hướng dẫn</span><span class="lang-en">See guide</span><span class="lang-zh">查看指南</span><span class="lang-ko">가이드 보기</span> ↗</a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </main>
+  <SourceNote />
+  <SiteFooter />
+</BaseLayout>
