@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LanguageSwitch from '../../components/LanguageSwitch.astro';
+import SiteFooter from '../../components/SiteFooter.astro';
+import places from '../../data/nearby.json';
+import photos from '../../data/nearby-photos.json';
+import {groups, labels, languages} from '../../data/nearby-copy';
+
+export function getStaticPaths() {
+  return places.map(place => ({params:{place:place.slug}, props:{place}}));
+}
+const {place} = Astro.props;
+const group = groups[place.group as keyof typeof groups];
+const map = 'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent([place.names.vi,place.address,'Đà Nẵng','Việt Nam'].join(', '));
+const makeTitle = (l: typeof languages[number]) => place.names[l] + ' · ' + group.title[l];
+const related = places.filter(p => p.group===place.group && p.slug!==place.slug);
+const photo = (photos as Record<string,{src:string,artist:string,license:string,licenseUrl:string,source:string}>)[place.slug];
+---
+<BaseLayout title={makeTitle('vi')} titleEn={makeTitle('en')} titleZh={makeTitle('zh')} titleKo={makeTitle('ko')}
+ description={place.guide.vi} descriptionEn={place.guide.en} descriptionZh={place.guide.zh} descriptionKo={place.guide.ko}
+ canonicalPath={'/nearby/'+place.slug+'/'}>
+  <header class="guide-hero">
+    <div class="topbar"><a class="brand" href="/"><img src="/favicon.svg" width="44" height="44" alt="" /><span class="brand-mark">CHỢ CỒN</span></a><LanguageSwitch /></div>
+    <div class="nearby-lead">
+      <a href="/#nearby">{languages.map(l => <span class={'lang-'+l}>{labels.nearby[l]}</span>)}</a>
+      <h1 class="display">{languages.map(l => <span class={'lang-'+l}>{place.names[l]}</span>)}</h1>
+      <p>{languages.map(l => <span class={'lang-'+l}>{group.title[l]}</span>)}</p>
+      <a href={map}>{languages.map(l => <span class={'lang-'+l}>{labels.map[l]} · {place.names[l]}</span>)}</a>
+    </div>
+  </header>
+  <main class="place-body">
+    <section><h2>{languages.map(l => <span class={'lang-'+l}>{labels.about[l]}</span>)}</h2>
+      {languages.map(l => <p class={'lang-'+l}>{group.about[l]}</p>)}
+      <a href={group.authority}>{languages.map(l => <span class={'lang-'+l}>{labels.source[l]}</span>)}</a>
+    </section>
+    <section><h2>{languages.map(l => <span class={'lang-'+l}>{labels.look[l]}</span>)}</h2>
+      {languages.map(l => <p class={'lang-'+l}>{place.guide[l]}</p>)}
+      {photo ? <figure><img src={photo.src} alt={place.names.vi} loading="lazy" /><figcaption><a href={photo.source}>{photo.artist}</a> · {photo.licenseUrl ? <a href={photo.licenseUrl}>{photo.license}</a> : photo.license}</figcaption></figure> :
+        <aside class="map-card"><span>{place.names.vi}</span><a href={map}>{languages.map(l => <span class={'lang-'+l}>{labels.image[l]}</span>)}</a></aside>}
+    </section>
+    <section><h2>{languages.map(l => <span class={'lang-'+l}>{labels.walk[l]}</span>)}</h2>
+      {languages.map(l => <p class={'lang-'+l}>{group.route[l]}</p>)}
+      <a href={map}>{place.address} · {place.names.vi}</a>
+    </section>
+    <section><h2>{languages.map(l => <span class={'lang-'+l}>{labels.faq[l]}</span>)}</h2>
+      <details open><summary>{languages.map(l => <span class={'lang-'+l}>{labels.q[l]}</span>)}</summary>
+      <div>{languages.map(l => <p class={'lang-'+l}>{group.advice[l]}</p>)}</div></details>
+      <a href={group.url}>{languages.map(l => <span class={'lang-'+l}>{labels.link[l]}</span>)}</a>
+    </section>
+    <section><h2>{languages.map(l => <span class={'lang-'+l}>{labels.more[l]}</span>)}</h2>
+      <ul>{related.map(p => <li><a href={'/nearby/'+p.slug+'/'}>{languages.map(l => <span class={'lang-'+l}>{p.names[l]}</span>)}</a></li>)}</ul>
+    </section>
+  </main><SiteFooter />
+</BaseLayout>
+<style>
+ .nearby-lead,.place-body{max-width:64rem;margin:auto;padding:clamp(1.5rem,5vw,4.5rem)}
+ .nearby-lead{color:var(--paper,#fff6e9)}.nearby-lead h1{margin:1rem 0;font-size:clamp(2.6rem,7vw,5.8rem);line-height:1.05}
+ .nearby-lead a,.place-body a{color:inherit;text-decoration:underline;text-underline-offset:.22em}
+ .place-body{color:var(--ink,#173b5c)}.place-body section{padding:1.8rem 0;border-bottom:1px solid #b3a998}
+ .place-body h2{font:600 clamp(1.5rem,3vw,2.3rem) Fraunces,serif;margin:0}
+ .place-body p{font-size:1.08rem;line-height:1.75;max-width:75ch;margin:1rem 0}.place-body ul{columns:2;padding-left:1.2rem}
+ .place-body li{break-inside:avoid;margin-bottom:.5rem}.place-body img{max-width:100%;max-height:32rem;object-fit:contain}
+ .map-card{margin-top:1.2rem;display:flex;flex-wrap:wrap;gap:.6rem 2rem;align-items:center;padding:1.2rem;border-left:4px solid #b94634;background:#eee5d5}
+ @media(max-width:600px){.place-body ul{columns:1}}
+</style>

@@ -1,0 +1,30 @@
+{
+  "cham-museum": {
+    "src": "/nearby/cham-museum.jpg",
+    "artist": "Phó Nháy (talk) 04:57, 27 August 2011 (UTC)",
+    "license": "Public domain",
+    "licenseUrl": "",
+    "source": "https://commons.wikimedia.org/wiki/File:Museum_of_Cham_Sculpture.jpg"
+  },
+  "japanese-bridge": {
+    "src": "/nearby/japanese-bridge.jpg",
+    "artist": "User dalbera on Flickr",
+    "license": "CC BY 1.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cau_Nhat_Ban.jpg"
+  },
+  "non-nuoc": {
+    "src": "/nearby/non-nuoc.jpg",
+    "artist": "Vyacheslav Argenberg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Non_nuoc_Basket_boats.jpg"
+  },
+  "trade-ceramics": {
+    "src": "/nearby/trade-ceramics.jpg",
+    "artist": "Steffen Schmitz (more photos)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:H%E1%BB%99i_An,_Museum_of_Trade_Ceramics,_2020-01_CN-02.jpg"
+  }
+}

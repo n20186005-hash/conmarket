@@ -1,0 +1,529 @@
+[
+  {
+    "slug": "cham-museum",
+    "group": "cham",
+    "names": {
+      "vi": "Bảo tàng Điêu khắc Chăm",
+      "en": "Cham Sculpture Museum",
+      "zh": "占婆雕刻博物馆",
+      "ko": "참 조각 박물관"
+    },
+    "address": "Đường 2 Tháng 9",
+    "guide": {
+      "vi": "Từ bờ tây cầu Rồng, vào sân bảo tàng rồi xem các bệ thờ sa thạch trước khi so sánh tượng đất nung.",
+      "en": "Start on the west bank at Dragon Bridge. Inside the museum compare the deep relief on sandstone pedestals with smaller terracotta ornaments.",
+      "zh": "从龙桥西岸走进博物馆庭院，先看砂岩祭坛深刻的浮雕，再比较小型陶饰。",
+      "ko": "용다리 서쪽 강변에서 안뜰로 들어가 사암 제단의 깊은 부조와 작은 테라코타 장식을 비교해 보세요."
+    }
+  },
+  {
+    "slug": "my-son-gallery",
+    "group": "cham",
+    "names": {
+      "vi": "Phòng Mỹ Sơn",
+      "en": "Mỹ Sơn Gallery",
+      "zh": "美山展厅",
+      "ko": "미선 전시실"
+    },
+    "address": "Bảo tàng Điêu khắc Chăm",
+    "guide": {
+      "vi": "Tìm các bộ phận kiến trúc từ thánh địa Mỹ Sơn. Lùi lại để hình dung cách tượng và khung cửa ghép vào tháp gạch.",
+      "en": "Look for architectural fragments from the Mỹ Sơn sanctuary. Step back from the door surrounds to picture their place in a brick tower.",
+      "zh": "留意来自美山圣地的建筑构件。退几步看门框与雕像，想象它们原来在砖塔上的位置。",
+      "ko": "미선 성지에서 온 건축 부재를 찾고 문틀에서 한 걸음 물러나 벽돌탑 안의 원래 위치를 그려 보세요."
+    }
+  },
+  {
+    "slug": "tra-kieu-gallery",
+    "group": "cham",
+    "names": {
+      "vi": "Phòng Trà Kiệu",
+      "en": "Trà Kiệu Gallery",
+      "zh": "茶峤展厅",
+      "ko": "짜끼에우 전시실"
+    },
+    "address": "Bảo tàng Điêu khắc Chăm",
+    "guide": {
+      "vi": "Đi quanh bệ thờ Trà Kiệu để theo dõi dải nhân vật chạy qua các mặt. Chọn góc chéo để thấy độ sâu của nét chạm.",
+      "en": "Walk around the Trà Kiệu pedestal to follow the figures from face to face. An oblique view brings out the depth of the carving.",
+      "zh": "沿茶峤祭坛绕行，看人物如何从一面延续到另一面。斜侧视角更容易看清雕刻深度。",
+      "ko": "짜끼에우 제단 주위를 돌며 옆면마다 이어지는 인물들을 찾아보세요. 비스듬히 보면 조각의 깊이가 드러납니다."
+    }
+  },
+  {
+    "slug": "dong-duong-gallery",
+    "group": "cham",
+    "names": {
+      "vi": "Phòng Đồng Dương",
+      "en": "Đồng Dương Gallery",
+      "zh": "同阳展厅",
+      "ko": "동즈엉 전시실"
+    },
+    "address": "Bảo tàng Điêu khắc Chăm",
+    "guide": {
+      "vi": "Xem nhóm tượng Phật giáo từ tu viện Đồng Dương. So sánh nét mặt dữ dội của tượng hộ pháp với các hình thờ tĩnh hơn.",
+      "en": "Scout out Buddhist sculpture from the Đồng Dương monastery. Compare the animated faces of guardian figures with the calmer devotional images.",
+      "zh": "寻找来自同阳佛教寺院的雕刻，比较护法夸张的面容与其他供奉像平静的神态。",
+      "ko": "동즈엉 불교 사원의 조각에서 수호신의 생동감 있는 표정과 다른 예배상의 차분한 얼굴을 비교해 보세요."
+    }
+  },
+  {
+    "slug": "thap-mam-gallery",
+    "group": "cham",
+    "names": {
+      "vi": "Phòng Tháp Mẫm",
+      "en": "Tháp Mẫm Gallery",
+      "zh": "塔曼展厅",
+      "ko": "탑맘 전시실"
+    },
+    "address": "Bảo tàng Điêu khắc Chăm",
+    "guide": {
+      "vi": "Dừng trước những linh thú từ Bình Định. Nhìn nghiêng các lớp trang trí để thấy cách thợ đá tạo khối từ hoa văn lặp lại.",
+      "en": "Look for the mythical animals from Bình Định. From the side, rows of ornament resolve into overlapping volumes of carved stone.",
+      "zh": "看来自平定的神兽。站在侧面观察，重复的纹饰会显出一层层堆叠的石雕体量。",
+      "ko": "빈딘의 신수를 찾아 옆으로 돌아가 보세요. 반복되는 무늬가 겹겹의 입체적인 돌 장식으로 드러납니다."
+    }
+  },
+  {
+    "slug": "thuy-son",
+    "group": "marble",
+    "names": {
+      "vi": "Thủy Sơn",
+      "en": "Water Mountain",
+      "zh": "水山",
+      "ko": "수산"
+    },
+    "address": "Ngũ Hành Sơn",
+    "guide": {
+      "vi": "Đọc sơ đồ ở chân núi rồi chọn một lối lên và một lối xuống. Các bậc đá nối chùa, hang và đài ngắm cảnh ở nhiều cao độ.",
+      "en": "Read the site map at the base and choose an ascent and a descent. Stone stairs connect cave shrines and viewpoints at different levels.",
+      "zh": "在山脚读路线图，分别选定上山和下山通道。石阶连接不同高度的洞窟、寺庙与观景台。",
+      "ko": "산 아래 지도에서 오를 길과 내려올 길을 고르세요. 여러 높이의 석굴과 사찰, 전망대를 돌계단이 잇습니다."
+    }
+  },
+  {
+    "slug": "huyen-khong",
+    "group": "marble",
+    "names": {
+      "vi": "Động Huyền Không",
+      "en": "Huyền Không Cave",
+      "zh": "玄空洞",
+      "ko": "후옌콩 동굴"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Chờ mắt quen bóng tối trước khi xuống bậc vào hang. Ngước nhìn các lỗ mở trên vòm và những bàn thờ phía dưới.",
+      "en": "Pause at the steps while your eyes adjust. Look up at the openings in the high ceiling, then down at the shrines in their pools of daylight.",
+      "zh": "在入口石阶稍停，等眼睛适应暗处。抬头看高处的天然洞口，再观察天光如何落在下方祭坛上。",
+      "ko": "입구 계단에서 눈이 어둠에 익숙해지면 천장의 구멍과 그 아래 빛이 내려앉은 제단을 차례로 보세요."
+    }
+  },
+  {
+    "slug": "am-phu",
+    "group": "marble",
+    "names": {
+      "vi": "Động Âm Phủ",
+      "en": "Âm Phủ Cave",
+      "zh": "阴府洞",
+      "ko": "암푸 동굴"
+    },
+    "address": "Ngũ Hành Sơn",
+    "guide": {
+      "vi": "Tìm lối vào riêng ở chân núi. Trong hang, các cảnh tượng gợi thế giới âm phủ trải dọc lối đi tối, khác hẳn chùa trên đỉnh.",
+      "en": "Find the separate entrance at the foot of the mountain. Follow the dim passage through images of the underworld before planning a separate ascent of Water Mountain.",
+      "zh": "先找山脚的独立入口。沿昏暗通道观看表现阴间的造像，再决定是否另行登水山。",
+      "ko": "산기슭의 별도 입구를 찾으세요. 어두운 통로의 저승을 묘사한 조형물을 보고 수산에 오를지 결정하세요."
+    }
+  },
+  {
+    "slug": "tang-chon",
+    "group": "marble",
+    "names": {
+      "vi": "Động Tàng Chơn",
+      "en": "Tàng Chơn Cave",
+      "zh": "藏真洞",
+      "ko": "땅쩐 동굴"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Đi vòng ra sau chùa Linh Ứng trên Thủy Sơn. Khoảng trống giống thung lũng nhỏ giúp quan sát ranh giới giữa sân chùa và vách hang.",
+      "en": "Go behind Linh Ứng Pagoda on Water Mountain. The little valley-like opening shows how the temple courtyard gives way to natural rock walls.",
+      "zh": "绕到水山灵应寺后方。小山谷般的开口能同时看到寺院庭地与天然洞壁。",
+      "ko": "수산 영응사 뒤로 돌아가 보세요. 작은 골짜기 같은 틈에서 사찰 마당이 자연 암벽으로 이어집니다."
+    }
+  },
+  {
+    "slug": "hoa-nghiem",
+    "group": "marble",
+    "names": {
+      "vi": "Động Hoa Nghiêm",
+      "en": "Hoa Nghiêm Cave",
+      "zh": "华严洞",
+      "ko": "호아응히엠 동굴"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Trên lối đến Huyền Không, hãy dừng ở không gian thờ nhỏ hơn này. Góc từ cửa hang cho thấy bàn thờ nép sát đá.",
+      "en": "Pause in this smaller place of worship on the approach to Huyền Không. From the doorway you can see how the shrine fits against the rock.",
+      "zh": "前往玄空洞途中，先在这处较小的礼拜空间停留。从洞口能看清佛龛如何依着岩壁设置。",
+      "ko": "후옌콩 동굴로 가는 길에 이 작은 예배 공간을 들르세요. 입구에 서면 암벽에 붙은 제단이 보입니다."
+    }
+  },
+  {
+    "slug": "tam-thai",
+    "group": "marble",
+    "names": {
+      "vi": "Chùa Tam Thai",
+      "en": "Tam Thai Pagoda",
+      "zh": "三台寺",
+      "ko": "땀타이 사찰"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Theo bậc đá đến sân chùa và dừng trước tượng Di Lặc. Khung cửa nhìn từ sân giúp tách mái chùa khỏi vách núi phía sau.",
+      "en": "Climb the stone steps to the courtyard and look for the Maitreya figure. Frame the roof from the courtyard gate against the slope behind.",
+      "zh": "沿石阶抵达院内，寻找弥勒像。站在庭院入口，可以山坡为背景拍摄寺庙屋顶。",
+      "ko": "돌계단 끝 마당에서 미륵상을 찾아보세요. 마당 입구에 서면 뒤쪽 산비탈을 배경으로 지붕을 담을 수 있습니다."
+    }
+  },
+  {
+    "slug": "linh-ung-thuy-son",
+    "group": "marble",
+    "names": {
+      "vi": "Chùa Linh Ứng Non Nước",
+      "en": "Linh Ứng Non Nước Pagoda",
+      "zh": "水山灵应寺",
+      "ko": "논느억 영응사"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Chọn đúng chùa trên Thủy Sơn khi tìm đường; Đà Nẵng còn có chùa cùng tên ở Sơn Trà. Từ sân, nối tiếp đến động Tàng Chơn.",
+      "en": "Select the Water Mountain pagoda on the map. Đà Nẵng also has a Linh Ứng on Sơn Trà. Continue from the courtyard to Tàng Chơn Cave.",
+      "zh": "导航选水山上的灵应寺，山茶半岛还有同名寺院。从寺院庭地可接着去藏真洞。",
+      "ko": "지도에서 수산에 있는 절을 고르세요. 선짜 반도에도 동명의 사찰이 있습니다. 마당에서 땅쩐 동굴로 이어가세요."
+    }
+  },
+  {
+    "slug": "vong-giang-dai",
+    "group": "marble",
+    "names": {
+      "vi": "Vọng Giang Đài",
+      "en": "River Viewing Pavilion",
+      "zh": "望江台",
+      "ko": "강 전망대"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Tìm biển chỉ đài ngắm sông trên sườn núi. So sánh dòng sông và khu dân cư phía trong đất liền với hướng biển ở Vọng Hải Đài.",
+      "en": "Follow signs for the river lookout. Compare the inland waterway and settlements with the seaward panorama from Vọng Hải Đài.",
+      "zh": "沿望江台路牌上行，俯瞰内陆河道与聚落，可与望海台朝向大海的视角对照。",
+      "ko": "강 전망대 표지를 따라가 내륙 수로와 마을을 살펴보고 바다 전망대의 풍경과 비교해 보세요."
+    }
+  },
+  {
+    "slug": "vong-hai-dai",
+    "group": "marble",
+    "names": {
+      "vi": "Vọng Hải Đài",
+      "en": "Sea Viewing Pavilion",
+      "zh": "望海台",
+      "ko": "바다 전망대"
+    },
+    "address": "Thủy Sơn",
+    "guide": {
+      "vi": "Ở đài hướng biển, nhìn dọc đường bờ để xác định bãi Non Nước. Đứng trong lan can khi lấy cả núi và biển vào khung hình.",
+      "en": "At the seaward lookout trace the coast toward Non Nước Beach. Stay behind the railing to frame the ridge and the sea together.",
+      "zh": "在面海的观景台沿海岸线辨认山水海滩。留在护栏内，即可把山脊和海面收入同一画面。",
+      "ko": "바다 전망대에서 해안선을 따라 논느억 해변을 찾아보세요. 난간 안에서 산등성이와 바다를 함께 담으세요."
+    }
+  },
+  {
+    "slug": "my-khe",
+    "group": "beach",
+    "names": {
+      "vi": "Bãi biển Mỹ Khê",
+      "en": "Mỹ Khê Beach",
+      "zh": "美溪海滩",
+      "ko": "미케 해변"
+    },
+    "address": "Võ Nguyên Giáp",
+    "guide": {
+      "vi": "Từ lối xuống công cộng trên đường ven biển, đi dọc bãi để quan sát đường chân trời mở ra phía Sơn Trà.",
+      "en": "Start at a public access on the seafront road. Walk the sand facing Sơn Trà to see how the peninsula closes the horizon.",
+      "zh": "从沿海道路的公共入口下到沙滩，朝山茶半岛方向步行，看半岛如何围合远处的海天线。",
+      "ko": "해안 도로의 공공 입구에서 모래밭으로 내려와 선짜 방향으로 걷다 보면 반도가 수평선을 감싸는 모습이 보입니다."
+    }
+  },
+  {
+    "slug": "pham-van-dong",
+    "group": "beach",
+    "names": {
+      "vi": "Bãi biển Phạm Văn Đồng",
+      "en": "Phạm Văn Đồng Beach",
+      "zh": "范文同海滩",
+      "ko": "팜반동 해변"
+    },
+    "address": "Phạm Văn Đồng",
+    "guide": {
+      "vi": "Đi theo trục Phạm Văn Đồng từ cầu Sông Hàn ra biển. Từ mép quảng trường có thể chụp đường phố mở thẳng ra bãi cát.",
+      "en": "Follow the Phạm Văn Đồng axis east from Han River Bridge. From the edge of the public square the city avenue opens directly onto the sand.",
+      "zh": "从韩江桥沿范文同路向东，在广场边缘可以拍到城市大道直通沙滩的景象。",
+      "ko": "한강 다리에서 팜반동 거리를 따라 동쪽으로 가세요. 광장 가장자리에서 도로가 모래밭으로 열리는 모습을 볼 수 있습니다."
+    }
+  },
+  {
+    "slug": "non-nuoc",
+    "group": "beach",
+    "names": {
+      "vi": "Bãi biển Non Nước",
+      "en": "Non Nước Beach",
+      "zh": "山水海滩",
+      "ko": "논느억 해변"
+    },
+    "address": "Ngũ Hành Sơn",
+    "guide": {
+      "vi": "Sau khi xuống Thủy Sơn, chọn lối công cộng ra biển. Quay về phía đất liền để thấy cụm núi nhô lên sau dải bờ thấp.",
+      "en": "After Water Mountain use a public beach access. Turn inland to see how abruptly the Marble Mountains rise beyond the low coastal strip.",
+      "zh": "游完水山后从公共入口去海滩，回望陆地方向，看五行山如何从低平海岸带拔地而起。",
+      "ko": "수산을 내려온 뒤 공공 통로로 해변에 가세요. 육지를 돌아보면 낮은 해안 뒤로 오행산이 솟아 있습니다."
+    }
+  },
+  {
+    "slug": "bac-my-an",
+    "group": "beach",
+    "names": {
+      "vi": "Bãi biển Bắc Mỹ An",
+      "en": "Bắc Mỹ An Beach",
+      "zh": "北美安海滩",
+      "ko": "박미안 해변"
+    },
+    "address": "Bắc Mỹ An",
+    "guide": {
+      "vi": "Chọn lối xuống mang tên Bắc Mỹ An ở phía nam Mỹ Khê. Đi về phía bắc để nhìn đường bờ cong về bán đảo.",
+      "en": "Use an access marked Bắc Mỹ An south of Mỹ Khê. Face north from the sand to trace the arc of the shoreline toward the peninsula.",
+      "zh": "在美溪以南选择标有北美安的下海通道，从沙滩向北看弯向半岛的海岸线。",
+      "ko": "미케 남쪽의 박미안 표지 통로를 이용하세요. 모래밭에서 북쪽을 보면 반도를 향해 휘어지는 해안선이 보입니다."
+    }
+  },
+  {
+    "slug": "japanese-bridge",
+    "group": "hoian",
+    "names": {
+      "vi": "Chùa Cầu",
+      "en": "Japanese Covered Bridge",
+      "zh": "日本廊桥",
+      "ko": "일본인 다리"
+    },
+    "address": "Nguyễn Thị Minh Khai, Hội An",
+    "guide": {
+      "vi": "Đi bộ từ đầu phố Trần Phú ra con kênh. Nhìn ngang từ bờ để thấy toàn bộ mái ngói bắc qua mặt nước rồi mới bước vào lối có mái.",
+      "en": "Approach the canal from Trần Phú Street. Look across from the bank for the tiled roof spanning the water before entering the covered passage.",
+      "zh": "从陈富街步行至河渠，先在岸边横看瓦顶跨水的全貌，再走进有顶廊道。",
+      "ko": "쩐푸 거리에서 수로로 내려가세요. 지붕 아래로 들어가기 전 둑에서 물을 가로지르는 기와지붕을 바라보세요."
+    }
+  },
+  {
+    "slug": "quan-cong",
+    "group": "hoian",
+    "names": {
+      "vi": "Miếu Quan Công",
+      "en": "Quan Công Temple",
+      "zh": "关公庙",
+      "ko": "관공묘"
+    },
+    "address": "Trần Phú, Hội An",
+    "guide": {
+      "vi": "Rẽ từ khu chợ vào trục sân và điện thờ Quan Công. Nhìn theo các cửa nối tiếp để thấy nhịp chuyển từ phố buôn bán sang nơi hành lễ.",
+      "en": "Turn from the market streets into the sequence of courts leading to the shrine of Guan Yu. The aligned doorways frame the transition from trade to worship.",
+      "zh": "从市场街区转入关公庙的院落，沿相互对齐的门洞望去，看商业街如何过渡到祭祀空间。",
+      "ko": "시장 골목에서 관우 사당의 마당으로 들어와 일렬로 이어지는 문을 바라보세요. 상업 공간이 예배 공간으로 바뀝니다."
+    }
+  },
+  {
+    "slug": "fujian-hall",
+    "group": "hoian",
+    "names": {
+      "vi": "Hội quán Phúc Kiến",
+      "en": "Fujian Assembly Hall",
+      "zh": "福建会馆",
+      "ko": "푸젠 회관"
+    },
+    "address": "Trần Phú, Hội An",
+    "guide": {
+      "vi": "Qua cổng hội quán của cộng đồng Phúc Kiến rồi nhìn về điện thờ Thiên Hậu. So sánh hình trang trí trên mái với những biểu tượng hàng hải bên trong.",
+      "en": "Walk through the Fujian community’s gate toward the shrine to the sea goddess Thiên Hậu. Compare the roof figures with the maritime imagery inside.",
+      "zh": "穿过福建社群会馆的大门走向天后殿，把屋脊装饰与内部的航海意象相互对照。",
+      "ko": "푸젠 공동체 회관의 문을 지나 바다의 여신을 모신 전각으로 가세요. 지붕 장식과 내부의 해양 상징을 비교해 보세요."
+    }
+  },
+  {
+    "slug": "cantonese-hall",
+    "group": "hoian",
+    "names": {
+      "vi": "Hội quán Quảng Đông",
+      "en": "Cantonese Assembly Hall",
+      "zh": "广肇会馆",
+      "ko": "광둥 회관"
+    },
+    "address": "Trần Phú, Hội An",
+    "guide": {
+      "vi": "Gần Chùa Cầu, rẽ vào sân hội quán Quảng Đông. Đứng lệch sang bên để thấy thân rồng uốn khúc quanh đài nước.",
+      "en": "Near the covered bridge step into the Cantonese hall's courtyard. From one side you can trace the dragon curving around the fountain.",
+      "zh": "从廊桥附近转入广肇会馆庭院。站在喷泉一侧，能看清龙身如何盘绕水池。",
+      "ko": "일본인 다리 가까이 있는 광둥 회관 마당에서 분수 옆으로 비켜서면 연못을 휘감은 용의 몸이 잘 보입니다."
+    }
+  },
+  {
+    "slug": "chaozhou-hall",
+    "group": "hoian",
+    "names": {
+      "vi": "Hội quán Triều Châu",
+      "en": "Chaozhou Assembly Hall",
+      "zh": "潮州会馆",
+      "ko": "차오저우 회관"
+    },
+    "address": "Nguyễn Duy Hiệu, Hội An",
+    "guide": {
+      "vi": "Theo phố Nguyễn Duy Hiệu tới hội quán của thương nhân Triều Châu. Tìm các mảng gỗ chạm phía trên đầu và chủ đề cầu bình an trên biển.",
+      "en": "Follow Nguyễn Duy Hiệu Street to the Chaozhou merchants’ hall. Look overhead at the carved wood and for imagery connected with safe sea journeys.",
+      "zh": "沿阮维效街抵达潮商会馆。抬头观察木雕，再找出与祈求海上平安有关的图像。",
+      "ko": "응우옌주이히에우 거리를 따라 차오저우 상인 회관에 가세요. 머리 위 목조 장식과 항해의 평안을 비는 상징을 찾아보세요."
+    }
+  },
+  {
+    "slug": "tan-ky",
+    "group": "hoian",
+    "names": {
+      "vi": "Nhà cổ Tấn Ký",
+      "en": "Tấn Ký Old House",
+      "zh": "进记古宅",
+      "ko": "떤끼 고택"
+    },
+    "address": "Nguyễn Thái Học, Hội An",
+    "guide": {
+      "vi": "Đứng trong sân giếng trời để hiểu cách nhà buôn nhận ánh sáng giữa hai dãy phòng. Hỏi người trông nhà về dấu nước lũ trên tường.",
+      "en": "Stand in the light well to see how daylight reaches the middle of a merchant house. Ask the hosts to point out the flood marks on the wall.",
+      "zh": "站在天井里观察商宅中段如何采光，可请看护人指出墙上的洪水水位记号。",
+      "ko": "상가 주택의 중정에서 가운데 방까지 빛이 스며드는 방식을 보세요. 관리인에게 벽에 남은 홍수 수위 표시를 물어보세요."
+    }
+  },
+  {
+    "slug": "phung-hung",
+    "group": "hoian",
+    "names": {
+      "vi": "Nhà cổ Phùng Hưng",
+      "en": "Phùng Hưng Old House",
+      "zh": "冯兴古宅",
+      "ko": "풍흥 고택"
+    },
+    "address": "Nguyễn Thị Minh Khai, Hội An",
+    "guide": {
+      "vi": "Từ đầu tây Chùa Cầu đi tới nhà gỗ hai tầng. Quan sát hàng cột dưới ban công trước khi xem kết cấu gỗ trong nhà.",
+      "en": "Walk from the west end of the covered bridge to the two-storey timber house. Study the columns beneath the balcony before examining the interior frame.",
+      "zh": "从廊桥西端走到这座双层木屋，先看阳台下的一排柱子，再进入室内观察木构架。",
+      "ko": "일본인 다리 서쪽 끝에서 이층 목조 주택까지 걸으세요. 발코니 아래 기둥을 보고 안으로 들어가 골조를 살펴보세요."
+    }
+  },
+  {
+    "slug": "duc-an",
+    "group": "hoian",
+    "names": {
+      "vi": "Nhà cổ Đức An",
+      "en": "Đức An Old House",
+      "zh": "德安古宅",
+      "ko": "득안 고택"
+    },
+    "address": "129 Trần Phú, Hội An",
+    "guide": {
+      "vi": "Tìm số 129 trên phố Trần Phú. Từ mặt phố nhìn qua các lớp cửa gỗ để thấy chiều sâu của ngôi nhà từng gắn với nghề bán sách.",
+      "en": "Find number 129 on Trần Phú Street. From the street look through the layers of timber doors into the depth of a house associated with bookselling.",
+      "zh": "在陈富街找到129号。从街边望过层层木门，可以体会这座曾经营书业的古宅有多深。",
+      "ko": "쩐푸 거리 129번지에서 겹겹이 이어진 나무 문 안쪽을 보세요. 책을 팔던 옛집의 깊이를 짐작할 수 있습니다."
+    }
+  },
+  {
+    "slug": "trade-ceramics",
+    "group": "hoian",
+    "names": {
+      "vi": "Bảo tàng Gốm sứ Mậu dịch",
+      "en": "Museum of Trade Ceramics",
+      "zh": "贸易陶瓷博物馆",
+      "ko": "무역도자기 박물관"
+    },
+    "address": "Trần Phú, Hội An",
+    "guide": {
+      "vi": "Theo dấu hàng hóa qua kiểu men và dáng bát đĩa. Đi từ hiện vật nhỏ đến sân nhà gỗ để liên hệ đồ gốm với phố cảng nơi chúng từng lưu thông.",
+      "en": "Follow traded goods through their glazes and vessel shapes. Step from the cases into the timber courtyard to connect the wares with the trading port.",
+      "zh": "从釉色和器形追踪货物的来路。再从展柜走到木屋庭院，把陶瓷与它们曾经流通的商港联系起来。",
+      "ko": "유약과 그릇 모양을 통해 교역품의 이동을 살펴보세요. 전시장을 나와 목조 마당에 서면 항구 도시의 맥락이 보입니다."
+    }
+  },
+  {
+    "slug": "sa-huynh",
+    "group": "hoian",
+    "names": {
+      "vi": "Bảo tàng Văn hóa Sa Huỳnh",
+      "en": "Museum of Sa Huỳnh Culture",
+      "zh": "沙黄文化博物馆",
+      "ko": "사후인 문화 박물관"
+    },
+    "address": "Trần Phú, Hội An",
+    "guide": {
+      "vi": "Bắt đầu tại các chum gốm dùng trong mai táng. Đối chiếu đồ tùy táng với bản đồ khai quật để hiểu lớp lịch sử trước đô thị thương cảng.",
+      "en": "Begin with the pottery burial jars. Read the excavation locations alongside the grave goods to place these communities before the rise of the trading town.",
+      "zh": "先看用于葬礼的陶瓮，再对照出土地点与随葬品，理解商港形成之前当地人的生活。",
+      "ko": "옹관부터 보고 부장품과 발굴 지점을 함께 읽어 보세요. 무역항이 생기기 전 이 지역 공동체의 모습을 알 수 있습니다."
+    }
+  },
+  {
+    "slug": "folk-culture",
+    "group": "hoian",
+    "names": {
+      "vi": "Bảo tàng Văn hóa Dân gian",
+      "en": "Museum of Folk Culture",
+      "zh": "民俗文化博物馆",
+      "ko": "민속문화 박물관"
+    },
+    "address": "Nguyễn Thái Học, Hội An",
+    "guide": {
+      "vi": "Chọn một nghề trong các gian trưng bày. Theo thứ tự dụng cụ để hình dung công việc đằng sau những sản phẩm bày bán ngoài phố.",
+      "en": "Pick one craft represented in the galleries. Follow its tools in order to see the work behind the goods on sale in town.",
+      "zh": "选一种馆内展示的传统手艺，按工序看工具，理解街上商品背后的制作过程。",
+      "ko": "전시된 수공예 한 가지를 골라 도구를 작업 순서대로 살펴보세요. 거리에서 파는 상품이 만들어지는 과정을 이해할 수 있습니다."
+    }
+  },
+  {
+    "slug": "tran-chapel",
+    "group": "hoian",
+    "names": {
+      "vi": "Nhà thờ tộc Trần",
+      "en": "Trần Family Chapel",
+      "zh": "陈氏宗祠",
+      "ko": "쩐씨 사당"
+    },
+    "address": "Lê Lợi, Hội An",
+    "guide": {
+      "vi": "Rời tuyến cửa hàng để vào khuôn viên nhà thờ tộc trên đường Lê Lợi. Dừng ở ngưỡng cửa và hỏi trước khi vào gian thờ gia tiên.",
+      "en": "Leave the shopping lanes for the family compound on Lê Lợi Street. Pause at the threshold and ask before entering the ancestral worship space.",
+      "zh": "从商铺街转入黎利街上的宗祠院落。到达门槛先停步，进入祭祖空间前请征得同意。",
+      "ko": "상점가를 벗어나 레러이 거리의 가문 사당으로 가세요. 문턱에서 잠시 멈추고 조상을 모시는 곳에 들어가기 전 허락을 구하세요."
+    }
+  },
+  {
+    "slug": "cam-pho",
+    "group": "hoian",
+    "names": {
+      "vi": "Đình Cẩm Phô",
+      "en": "Cẩm Phô Communal House",
+      "zh": "锦铺亭",
+      "ko": "껌포 마을 회관"
+    },
+    "address": "Nguyễn Thị Minh Khai, Hội An",
+    "guide": {
+      "vi": "Đi tiếp về phía tây từ Chùa Cầu để xem đình làng. Quan sát sân trước rộng dành cho sinh hoạt cộng đồng rồi nhìn trục cửa vào chính điện.",
+      "en": "Continue west from the covered bridge to the communal house. Compare its open forecourt for community activities with the sequence of doors into the shrine.",
+      "zh": "从廊桥继续向西到村亭，先看用于社区活动的开阔前庭，再沿门洞望向主殿。",
+      "ko": "일본인 다리에서 서쪽으로 걸어 마을 회관을 찾아가세요. 공동 행사를 위한 넓은 앞마당과 사당으로 향하는 문을 살펴보세요."
+    }
+  }
+]

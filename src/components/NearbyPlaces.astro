@@ -1,0 +1,20 @@
+---
+import places from '../data/nearby.json';
+import {groups, labels, languages} from '../data/nearby-copy';
+---
+<section class="nearby-shelf" id="nearby">
+  <div class="nearby-inner">
+    <h2 class="display">{languages.map(l => <span class={'lang-'+l}>{labels.nearby[l]}</span>)}</h2>
+    {Object.entries(groups).map(([key, group]) => <div class="nearby-group">
+      <h3>{languages.map(l => <span class={'lang-'+l}>{group.title[l]}</span>)}</h3>
+      <ul>{places.filter(p => p.group === key).map(p => <li><a href={'/nearby/'+p.slug+'/'}>{languages.map(l => <span class={'lang-'+l}>{p.names[l]}</span>)}</a></li>)}</ul>
+    </div>)}
+  </div>
+</section>
+<style>
+  .nearby-shelf{background:var(--paper,#faf4e8);color:var(--ink,#173b5c);padding:clamp(3rem,7vw,7rem) 5%}
+  .nearby-inner{max-width:72rem;margin:auto}.nearby-inner h2{font-size:clamp(2.4rem,5vw,4.5rem);margin:0 0 2rem}
+  .nearby-group{border-top:1px solid currentColor;padding:1.2rem 0}.nearby-group h3{font-size:1.35rem;margin:0 0 .9rem}
+  ul{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:.65rem 1.5rem;padding:0}
+  a{color:inherit;text-decoration:underline;text-underline-offset:.22em}
+</style>
