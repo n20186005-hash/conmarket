@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LanguageSwitch from '../components/LanguageSwitch.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+export const prerender = true;
+const photos = [
+  {
+    src: '/con-market-hero.jpg', width: 1600, height: 1000,
+    alt: {vi:'Ảnh thật mặt tiền và lối vào Chợ Cồn ở Đà Nẵng',en:'Photograph of the Con Market entrance and frontage in Da Nang',zh:'岘港昆市场入口与外立面实景照片',ko:'다낭 꼰 시장 입구와 외관 실경 사진'},
+    heading: {vi:'Lối vào Chợ Cồn',en:'Market entrance',zh:'市场入口',ko:'시장 입구'},
+    caption: {vi:'Khu vực tiếp cận chợ từ các đường phố trung tâm.',en:'The market approach from central Da Nang streets.',zh:'从岘港市中心街道通往市场的入口。',ko:'다낭 중심가에서 시장으로 들어가는 입구.'}
+  },
+  {
+    src: '/con-market-hero-documentary.webp', width: 1200, height: 750,
+    alt: {vi:'Ảnh tư liệu Chợ Cồn Đà Nẵng',en:'Documentary photograph of Con Market in Da Nang',zh:'岘港昆市场现场纪实照片',ko:'다낭 꼰 시장 기록 사진'},
+    heading: {vi:'Góc nhìn khác về chợ',en:'Another view of the market',zh:'市场另一视角',ko:'시장의 다른 모습'},
+    caption: {vi:'Ảnh tư liệu được lưu trong phiên bản trước của trang.',en:'A photograph preserved in an earlier version of this guide.',zh:'保存在本站早期版本中的照片。',ko:'이전 가이드 버전에 보존된 사진.'}
+  },
+  {
+    src: '/con-market-hall.jpg', width: 1000, height: 675,
+    alt: {vi:'Lối đi trong nhà gần các quầy ăn uống tại Chợ Cồn',en:'Indoor market aisle and food stalls at Con Market',zh:'昆市场室内餐饮通道和摊位',ko:'꼰 시장 실내 음식 가게와 통로'},
+    heading: {vi:'Bên trong khu chợ',en:'Inside the market',zh:'市场内部',ko:'시장 내부'},
+    caption: {vi:'Các lối đi và quầy hàng bên trong khu chợ.',en:'Aisles and stalls in the covered market.',zh:'室内市场的通道与摊位。',ko:'실내 시장의 통로와 가게.'}
+  },
+  {
+    src: '/con-market-spices.jpg', width: 1000, height: 675,
+    alt: {vi:'Quầy hàng khô và gia vị trong Chợ Cồn',en:'Dried goods and spice stall at Con Market',zh:'昆市场干货与香料摊位',ko:'꼰 시장의 건어물과 향신료 가게'},
+    heading: {vi:'Hàng khô và gia vị',en:'Dried goods and spices',zh:'干货与香料',ko:'건어물과 향신료'},
+    caption: {vi:'Hàng khô, thực phẩm đóng gói và gia vị là một phần của hoạt động mua sắm tại chợ.',en:'Dried foods, packaged goods and spices are part of the market’s retail mix.',zh:'干货、包装食品和香料是市场常见的商品类别。',ko:'건조 식품·포장 상품·향신료는 시장의 대표 상품군입니다.'}
+  }
+];
+---
+<BaseLayout title="Ảnh thực tế Chợ Cồn Đà Nẵng — Thư viện hình ảnh" description="Xem ảnh thực tế về lối vào, khu ăn uống và gian hàng khô của Chợ Cồn Đà Nẵng, được khôi phục từ phiên bản trước của website."
+ titleEn="Con Market Da Nang Photos — Entrance, Food Hall & Stalls" descriptionEn="Browse real photos of Con Market (Chợ Cồn) in Da Nang: entrance, indoor food hall and dried-goods stalls, restored from the site's earlier archive."
+ titleZh="岘港昆市场实拍图集 — 入口、餐饮区与摊位" descriptionZh="查看岘港昆市场（Con Market）的入口、室内餐饮区和干货摊位真实照片，素材恢复自本站早期版本。"
+ titleKo="다낭 꼰 시장 실경 사진 — 입구·음식 구역·가게" descriptionKo="다낭 꼰 시장(Con Market)의 입구, 실내 음식 구역, 건어물 가게 사진을 이전 사이트 자료에서 복원했습니다."
+ canonicalPath="/gallery/">
+  <header class="guide-hero">
+    <div class="topbar"><a class="brand" href="/"><img src="/favicon.svg" alt="" width="44" height="44" /><span class="brand-name">CHỢ CỒN</span></a><LanguageSwitch /></div>
+    <div class="section-shell">
+      <p class="eyebrow"><span class="lang-vi">Hình ảnh thực tế</span><span class="lang-en">Real market photographs</span><span class="lang-zh">市场实拍照片</span><span class="lang-ko">시장 실경 사진</span></p>
+      <h1 class="display"><span class="lang-vi">Ảnh Chợ Cồn Đà Nẵng</span><span class="lang-en">Con Market photo gallery</span><span class="lang-zh">岘港昆市场实拍图集</span><span class="lang-ko">다낭 꼰 시장 사진 갤러리</span></h1>
+      <p class="intro-text lang-vi">Ảnh lối vào, lối đi ăn uống và gian hàng khô được khôi phục từ thư viện hình ảnh của phiên bản trước. Những ảnh này không phải ảnh minh họa được tạo bằng máy.</p>
+      <p class="intro-text lang-en">Photos of the entrance, indoor aisles and dried-goods stalls were restored from this site's earlier photo archive. These are photographs, not generated illustrations.</p>
+      <p class="intro-text lang-zh">这些入口、室内通道和干货摊位照片恢复自本站早期图片档案，属于实景照片而非生成插画。</p>
+      <p class="intro-text lang-ko">입구, 실내 통로, 건어물 가게의 사진은 이전 사이트 사진 자료에서 복원했습니다. 생성된 삽화가 아닌 실제 사진입니다.</p>
+      <a class="guide-back" href="/"><span class="lang-vi">← Trang chủ Chợ Cồn</span><span class="lang-en">← Con Market main guide</span><span class="lang-zh">← 返回昆市场主指南</span><span class="lang-ko">← 꼰 시장 메인 가이드</span></a>
+    </div>
+  </header>
+  <main class="guide-body">
+    <section class="section-shell gallery-section" aria-labelledby="gallery-title">
+      <div><p class="section-index">01 —</p><p class="eyebrow"><span class="lang-vi">Bộ ảnh</span><span class="lang-en">Photographs</span><span class="lang-zh">实景照片</span><span class="lang-ko">사진</span></p></div>
+      <div><h2 id="gallery-title" class="display section-title"><span class="lang-vi">Khám phá khu chợ qua hình ảnh</span><span class="lang-en">See the market before you visit</span><span class="lang-zh">通过照片了解市场</span><span class="lang-ko">사진으로 시장 살펴보기</span></h2>
+        <div class="gallery-photo-grid">
+          {photos.map(p => <figure class="gallery-photo-card"><img src={p.src} width={p.width} height={p.height} alt={p.alt.vi} data-alt-vi={p.alt.vi} data-alt-en={p.alt.en} data-alt-zh={p.alt.zh} data-alt-ko={p.alt.ko} loading="lazy" decoding="async" />
+            <figcaption><strong><span class="lang-vi">{p.heading.vi}</span><span class="lang-en">{p.heading.en}</span><span class="lang-zh">{p.heading.zh}</span><span class="lang-ko">{p.heading.ko}</span></strong>
+            <p class="lang-vi">{p.caption.vi}</p><p class="lang-en">{p.caption.en}</p><p class="lang-zh">{p.caption.zh}</p><p class="lang-ko">{p.caption.ko}</p></figcaption>
+          </figure>)}
+        </div>
+      </div>
+    </section>
+    <section class="section-shell gallery-section" aria-labelledby="gallery-planning">
+      <div><p class="section-index">02 —</p><p class="eyebrow"><span class="lang-vi">Kế hoạch tham quan</span><span class="lang-en">Plan your visit</span><span class="lang-zh">行前规划</span><span class="lang-ko">방문 계획</span></p></div>
+      <div><h2 id="gallery-planning" class="display section-title"><span class="lang-vi">Từ hình ảnh đến chuyến đi</span><span class="lang-en">Plan a market visit</span><span class="lang-zh">从看图到安排行程</span><span class="lang-ko">사진에서 방문 계획으로</span></h2>
+        <div class="gallery-links">
+          <a href="/an-gi-o-cho-con/"><span class="lang-vi">Ăn gì ở chợ</span><span class="lang-en">What to eat</span><span class="lang-zh">吃什么</span><span class="lang-ko">먹거리</span></a>
+          <a href="/mua-gi-o-cho-con/"><span class="lang-vi">Mua gì ở chợ</span><span class="lang-en">What to buy</span><span class="lang-zh">买什么</span><span class="lang-ko">쇼핑</span></a>
+          <a href="/gio-mo-cua-cho-con/"><span class="lang-vi">Giờ tham khảo</span><span class="lang-en">Opening hours</span><span class="lang-zh">营业时间</span><span class="lang-ko">영업 시간</span></a>
+          <a href="/cach-den-cho-con/"><span class="lang-vi">Đường đi</span><span class="lang-en">Directions</span><span class="lang-zh">交通路线</span><span class="lang-ko">찾아가는 길</span></a>
+        </div>
+        <p><span class="lang-vi">Chợ Cồn, khu phố Hùng Vương và Ông Ích Khiêm, Đà Nẵng, Việt Nam.</span><span class="lang-en">Con Market, Hùng Vương and Ông Ích Khiêm streets, Da Nang, Vietnam.</span><span class="lang-zh">越南岘港市雄王街与英节卿街附近的昆市场。</span><span class="lang-ko">베트남 다낭 훙브엉 거리와 온익키엠 거리의 꼰 시장.</span></p>
+        <a class="gallery-map" href="https://maps.app.goo.gl/MS8rWseJ7bPBQRrt8" target="_blank" rel="noopener noreferrer"><span class="lang-vi">Xem vị trí trên Google Maps</span><span class="lang-en">Find Con Market on Google Maps</span><span class="lang-zh">查看 Google 地图定位</span><span class="lang-ko">Google 지도에서 위치 보기</span></a>
+      </div>
+    </section>
+    <section class="section-shell gallery-section" aria-labelledby="gallery-faq">
+      <div><p class="section-index">03 —</p><p class="eyebrow">FAQ</p></div>
+      <div><h2 id="gallery-faq" class="display section-title"><span class="lang-vi">Câu hỏi về ảnh</span><span class="lang-en">Photo questions</span><span class="lang-zh">照片常见问题</span><span class="lang-ko">사진 관련 질문</span></h2>
+        <div class="faq-list">
+          <details><summary><span class="lang-vi">Đây có phải ảnh chụp Chợ Cồn?</span><span class="lang-en">Are these photographs of Con Market?</span><span class="lang-zh">这些是昆市场实拍照片吗？</span><span class="lang-ko">이 사진은 꼰 시장에서 촬영한 것인가요?</span></summary>
+          <div class="answer"><p class="lang-vi">Ảnh được lấy từ các tệp ảnh chợ có trong phiên bản trước của website, không phải hình vẽ thay thế.</p><p class="lang-en">They are market photo files recovered from an earlier version of this website, rather than replacement drawings.</p><p class="lang-zh">这些照片来自网站早期版本中的市场图片文件，并非替代用的插画。</p><p class="lang-ko">대체 삽화가 아닌 이전 사이트 버전의 시장 사진 파일에서 복원한 이미지입니다.</p></div></details>
+          <details><summary><span class="lang-vi">Có thể xem giờ mở cửa ở đâu?</span><span class="lang-en">Where can I check the opening hours?</span><span class="lang-zh">在哪里查看营业时间？</span><span class="lang-ko">영업 시간은 어디서 확인하나요?</span></summary>
+          <div class="answer"><p class="lang-vi">Trang giờ mở cửa tóm tắt khung thường thấy và giải thích vì sao thời gian từng quầy có thể khác nhau.</p><p class="lang-en">The opening-hours guide lists commonly reported hours and explains why individual stalls may differ.</p><p class="lang-zh">营业时间指南列出常见营业时段，并解释各摊位为何可能不同。</p><p class="lang-ko">영업 시간 안내에서 일반적인 시간과 가게별 차이를 설명합니다.</p></div></details>
+          <details><summary><span class="lang-vi">Chợ nằm ở đâu?</span><span class="lang-en">Where is the market?</span><span class="lang-zh">市场在哪里？</span><span class="lang-ko">시장은 어디에 있나요?</span></summary>
+          <div class="answer"><p class="lang-vi">Chợ Cồn nằm ở khu Hùng Vương và Ông Ích Khiêm, trung tâm Đà Nẵng. Liên kết bản đồ ở trên dẫn đến địa điểm chợ.</p><p class="lang-en">Con Market is by Hùng Vương and Ông Ích Khiêm streets in central Da Nang. The map link above opens the market location.</p><p class="lang-zh">昆市场位于岘港市中心雄王街与英节卿街附近。上方地图链接可查看市场位置。</p><p class="lang-ko">꼰 시장은 다낭 중심가 훙브엉 및 온익키엠 거리에 있습니다. 위 지도 링크에서 위치를 확인하세요.</p></div></details>
+        </div>
+      </div>
+    </section>
+  </main><SiteFooter />
+</BaseLayout>
+<style>
+.gallery-section .section-title{max-width:24ch;margin-bottom:1.4rem}
+.gallery-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:1.3rem;margin-top:1.8rem}
+.gallery-photo-card{margin:0;background:var(--paper);border:1px solid rgba(23,59,92,.15);box-shadow:5px 5px 0 rgba(23,59,92,.10)}
+.gallery-photo-card img{display:block;width:100%;height:clamp(12rem,24vw,17rem);object-fit:cover}
+.gallery-photo-card figcaption{padding:1rem 1.1rem}
+.gallery-photo-card strong{color:var(--ink);font-size:1.1rem}
+.gallery-photo-card p{margin:.4rem 0 0;font-size:.95rem;line-height:1.65}
+.gallery-links{display:flex;flex-wrap:wrap;gap:.7rem;margin:1rem 0}
+.gallery-links a,.gallery-map{border:1px solid currentColor;padding:.55rem .85rem;text-underline-offset:.2rem}
+.gallery-map{display:inline-block;margin-top:.6rem}
+</style>

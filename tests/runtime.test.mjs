@@ -22,3 +22,5 @@ test('actual client renders valid seven-day payload and falls back for incomplet
  for(const mutate of [data=>delete data.now.temperature,data=>data.now.temperature=null,data=>data.days.pop(),data=>delete data.advice]){const data=structuredClone(payload);mutate(data);const html=await render(data);assert.match(html,/briefly unavailable/);assert.doesNotMatch(html,/null°C|undefined°C/);}
  assert.match(await render(payload,false),/briefly unavailable/);
 });
+
+test('canonical host redirects www to HTTPS apex without losing paths or query strings',async()=>{for(const origin of ['http://www.conmarket.org','https://www.conmarket.org']){const response=await worker.fetch(new Request(origin+'/ko/gallery/?a=1&a=2'),{ASSETS:{fetch(){throw Error('must not access assets');}}});assert.equal(response.status,308);assert.equal(response.headers.get('location'),'https://conmarket.org/ko/gallery/?a=1&a=2');}});

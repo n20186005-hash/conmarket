@@ -254,6 +254,7 @@ function validForecast(data) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.hostname === "www.conmarket.org") { url.hostname = "conmarket.org"; url.protocol = "https:"; return Response.redirect(url.href, 308); }
     if (url.hostname === "conmarket.org" && url.protocol === "http:") { url.protocol = "https:"; return Response.redirect(url.href, 308); }
     const head = request.method === "HEAD";
     const finish = response => head ? new Response(null, {status: response.status, headers: response.headers}) : response;
